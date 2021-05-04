@@ -12,7 +12,7 @@ const signin = (username, password) => async (dispatch) => {
         dispatch({
             type: USER_SIGNIN_SUCCESS, payload:data
         });
-        // Cookie.set('userInfo',JSON.stringify(data))
+        Cookie.set('userInfo', JSON.stringify(data));
     } catch (error) {
         dispatch({
             type:USER_SIGNIN_FAILURE, payload:error.message
@@ -30,7 +30,6 @@ const register = (name, username, password,email) => async (dispatch) => {
         dispatch({
             type: USER_REGISTER_SUCCESS, payload:data
         });
-        Cookie.set('userInfo2',JSON.stringify(data))
     } catch (error) {
         dispatch({
             type:USER_REGISTER_FAILURE, payload:error.message
@@ -59,7 +58,7 @@ const update = ({ userId, name, email, password }) => async (dispatch, getState)
     dispatch({ type: USER_LOGOUT });
     // RCTNetworking.clearCookies(() => {});
     RCTNetworking.clearCookies((result) => {
-        console.log(result) //true if successfully cleared
+        //console.log(result) //true if successfully cleared
         });
   }
 

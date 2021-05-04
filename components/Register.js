@@ -17,12 +17,11 @@ function Register(props) {
 
     const dispatch = useDispatch();
 
-    const redirect = "/"
+    const redirect = "/login"
     const submitHandler=()=>{
         if(password===rePassword){
             if(email.includes('@')){
                 dispatch(register(name,username,password,email,));
-                console.log(userInfo2)
                 props.history.push('/')
             }else{
                 alert("That is not a valid e mail address")
@@ -59,7 +58,7 @@ function Register(props) {
         return( )=>{
             //
         } 
-    },[userInfo2]
+    },[]
     );
     return (
         <View style={styles.loginContainer}>

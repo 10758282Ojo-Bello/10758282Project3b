@@ -12,10 +12,13 @@ function Login(props) {
     const {loading, userInfo,error} = userSignin;
     const dispatch = useDispatch();
     const submitHandler=()=>{
-        dispatch(signin(username,password));
-        if(userInfo){
-            props.history.push('/')
+        dispatch(signin(username,password))
+        console.log(error)
+        if(!loading){
+            props.history.push('/') 
         }
+        
+        
         
     }
     const changePassword=(text)=>{
@@ -25,13 +28,12 @@ function Login(props) {
         setUsername(text)
     }
     useEffect(() => {
-        if(userInfo){
-            // 
-        }
+                //props.history.push('/')  
+            
         return () => {
             //
         }
-    }, [userInfo])
+    }, [error])
     return (
         <View style={styles.loginContainer}>
             <Text style={styles.texts}>Login Here:</Text>

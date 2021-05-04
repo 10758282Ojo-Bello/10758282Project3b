@@ -3,7 +3,7 @@ import Cookie from "js-cookie"
 import { userSigninReducer, userRegisterReducer, userUpdateReducer,  } from './reducers/userReducers';
 import thunk from 'redux-thunk'
 const userInfo = Cookie.getJSON("userInfo") || null;
-const userInfo2 = Cookie.getJSON("userInfo2") || null;
+const userInfo2 = Cookie.getJSON("userInfo") || null;
 
 const initialState = {userSigninReducer:{userInfo},userRegisterReducer:{userInfo2}}
 
@@ -11,6 +11,7 @@ const reducer = combineReducers({
     userSignin: userSigninReducer,
     userRegister: userRegisterReducer,
     userUpdate: userUpdateReducer,
+
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

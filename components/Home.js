@@ -1,36 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState, useEffect} from 'react'
+import React, { useEffect} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-import { NativeRouter,Link,Route } from 'react-router-native';
+import { Link } from 'react-router-native';
 import { logout } from '../actions/userActions';
-import Cookie from 'js-cookie'
 
 function Home(props) {
     const userSignin = useSelector(state=>state.userSignin);
     const userRegister = useSelector(state => state.userRegister);
     const {userInfo} = userSignin;
-    const {userInfo2} = userRegister;
-    
+
     let activeUser;
     
     
     if (userInfo!== {}&& userInfo){
         activeUser = userInfo
-    } else if(userInfo2!=={}&&userInfo2){
-        activeUser = userInfo2
-    }
+    } 
+
     const dispatch = useDispatch();
     const handleLogout = () => {
         dispatch(logout());
-        Cookie.get('userInfo')
         props.history.push("/login")
 }
     useEffect(() => {
         return () => {
             //
         }
-    }, [activeUser])
+    }, [])
     return (
         <View style={styles.homecontainer}>
             {
