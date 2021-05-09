@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "10758282project2",
-    "slug": "10758282project2",
+    "name": "10758282project3b",
+    "slug": "10758282project3b",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,7 +18,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ojobello10758282.project2",
+      "bundleIdentifier": "com.ojobello10758282.project3b",
       "buildNumber": "1.0.0"
     },
     "android": {
@@ -26,13 +26,13 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.ojobello10758282.project2",
+      "package": "com.ojobello10758282.project3b",
       "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Project2-10758282",
+    "description": "Project3b-10758282",
     "githubUrl": "https://github.com/10758282Ojo-Bello/10758282-Project2"
   }
 }

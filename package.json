@@ -8,8 +8,11 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-clipboard/clipboard": "^1.7.0",
+    "@react-native-community/clipboard": "^1.5.1",
     "axios": "^0.21.1",
     "expo": "~41.0.0",
+    "expo-clipboard": "~1.0.2",
     "expo-status-bar": "~1.0.4",
     "js-cookie": "^2.2.1",
     "react": "16.13.1",

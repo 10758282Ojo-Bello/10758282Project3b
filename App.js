@@ -17,7 +17,7 @@ export default function App() {
           <View style={styles.container}>
           <ImageBackground source={image} style={styles.image}>
             
-            <View>
+            <View style={styles.content}>
               <StatusBar style="auto" />
               <Text style={styles.textVertMarg}>Hello from 10758282 </Text>
               <Route exact path="/" component={Home} />
@@ -35,6 +35,9 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  content:{
+    marginTop:100
+  },
   container: {
     backgroundColor: '#fff',
     alignItems:'center',
@@ -56,6 +59,6 @@ const styles = StyleSheet.create({
   image: {
     flex: 1  ,
     resizeMode: "cover",
-    justifyContent: "center",
+    // justifyContent: "center",
   }
 });
